@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/zara-portfolio/static/css/main.a389c6b8.css",
-    "main.js": "/zara-portfolio/static/js/main.6f4b16fd.js",
+    "main.js": "/zara-portfolio/static/js/main.ca96e131.js",
     "static/js/453.f5afd55b.chunk.js": "/zara-portfolio/static/js/453.f5afd55b.chunk.js",
     "static/media/LocalVoice_Clip.gif": "/zara-portfolio/static/media/LocalVoice_Clip.926768c5a78adc0afca1.gif",
     "static/media/InstaChef_Preview.gif": "/zara-portfolio/static/media/InstaChef_Preview.26765f67428d543d20c5.gif",
@@ -29,11 +29,11 @@
     "static/media/README.txt": "/zara-portfolio/static/media/README.955a016bbeab9427db94.txt",
     "index.html": "/zara-portfolio/index.html",
     "main.a389c6b8.css.map": "/zara-portfolio/static/css/main.a389c6b8.css.map",
-    "main.6f4b16fd.js.map": "/zara-portfolio/static/js/main.6f4b16fd.js.map",
+    "main.ca96e131.js.map": "/zara-portfolio/static/js/main.ca96e131.js.map",
     "453.f5afd55b.chunk.js.map": "/zara-portfolio/static/js/453.f5afd55b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a389c6b8.css",
-    "static/js/main.6f4b16fd.js"
+    "static/js/main.ca96e131.js"
   ]
 }
