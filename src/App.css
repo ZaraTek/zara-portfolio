@@ -62,7 +62,7 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
-  padding: 2rem;
+  padding: 1rem;
   text-align: center;
   align-items: start;
 }
@@ -231,9 +231,17 @@ body {
   background: rgba(255, 255, 255, 0.2);
   padding: 1.5rem;
   border-radius: 8px;
-  margin: 20px;
+  margin: 15px;
   transition: background-color 0.3s ease, transform 0.2s ease;
   display: grid;
+  text-align: center;
+  justify-content: center;
+}
+
+.youtube-container {
+  border-radius: 8px;
+  border-color: #c2a6ef;
+  display: flex;
 }
 
 .audio-player {
@@ -331,11 +339,6 @@ body {
   justify-self: end;
   font-size: 0.85rem;
   opacity: 0.9;
-}
-
-.youtube-container {
-  border-radius: 8px;
-  display: flex;
 }
 
 .column {
