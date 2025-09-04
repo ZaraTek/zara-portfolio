@@ -100,47 +100,44 @@ export default function AudioPlayer({
       />
 
       {/* Play / Pause */}
-      <button
-        className="ap-btn"
-        onClick={togglePlay}
-        aria-label={isPlaying ? "Pause" : "Play"}
-      >
-        {isPlaying
-          ? (pauseIcon ?? "❚❚")
-          : (playIcon ?? "►")}
-      </button>
-
-      {/* Title */}
-      <div className="ap-title" title={title}>{title}</div>
-
-      {/* Progress bar (click to seek) */}
-      <div
-        className="ap-progress"
-        ref={progressRef}
-        onClick={handleSeek}
-        onKeyDown={handleKeySeek}
-        role="slider"
-        tabIndex={0}
-        aria-valuemin={0}
-        aria-valuemax={Math.floor(duration)}
-        aria-valuenow={Math.floor(current)}
-        aria-label="Seek"
-      >
-        <div className="ap-progress__track" />
-        <div
-          className="ap-progress__fill"
-          style={{ width: `${progressPct}%` }}
-        />
-        <div
-          className="ap-progress__thumb"
-          style={{ left: `${progressPct}%` }}
-        />
+      <div className="ap-head">
+        <button
+          className="ap-btn"
+          onClick={togglePlay}
+          aria-label={isPlaying ? "Pause" : "Play"}
+        >
+          {isPlaying
+            ? (pauseIcon ?? "❚❚")
+            : (playIcon ?? "►")}
+        </button>
+        <div className="ap-info">
+          {/* Title */}
+          <div className="ap-title" title={title}>{title}</div>
+          {/* Progress bar (click to seek) */}
+          <div
+            className="ap-progress"
+            ref={progressRef}
+            onClick={handleSeek}
+            onKeyDown={handleKeySeek}
+            role="slider"
+            tabIndex={0}
+            aria-valuemin={0}
+            aria-valuemax={Math.floor(duration)}
+            aria-valuenow={Math.floor(current)}
+            aria-label="Seek"
+          >
+            <div className="ap-progress__track" />
+            <div className="ap-progress__fill" style={{ width: `${progressPct}%` }} />
+            <div className="ap-progress__thumb" style={{ left: `${progressPct}%` }} />
+          </div>
+          {/* Time */}
+          <div className="ap-time">
+            {fmt(current)} / {fmt(duration)}
+          </div>
+        </div>
       </div>
-
-      {/* Time */}
-      <div className="ap-time">
-        {fmt(current)} / {fmt(duration)}
-      </div>
+      
+      
     </div>
   );
 }

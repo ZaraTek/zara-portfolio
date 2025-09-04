@@ -31,7 +31,7 @@ export default function ProjectModal({ project, onClose }) {
              )}
              {youtube && (
                <a href={youtube} target="_blank" rel="noopener noreferrer">
-                 YouTube <img src={youTubeIcon} className="youtube-icon"></img>
+                 YouTube Demo<img src={youTubeIcon} className="youtube-icon"></img>
                </a>
              )}
              {demo && (

@@ -93,6 +93,13 @@ function App() {
       play: 'assets/images/play_button_2.png',
       pause: 'assets/images/pause_button_2.png',
       audio: "assets/audio/ginger ale.mp3"
+    },
+    {
+      id: "a_static_afterlife",
+      title: "A Static Afterlife",
+      play: 'assets/images/play_button_2.png',
+      pause: 'assets/images/pause_button_2.png',
+      audio: 'assets/audio/a static afterlife.mp3'
     }
   ]
 
@@ -170,7 +177,7 @@ function App() {
               <p className="paragraph">
                 Hi! My name is Zara Tekmen and I'm a second-year student at UNC Chapel Hill, majoring in Computer Science and Music. <br></br><br></br>
                 I'm interested in full-stack software development, AI/ML, and cybersecurity. Check out my Hackathon submissions and other projects to the left!<br></br><br></br>
-                I play the trombone, guitar, and piano, and like to play and listen to all genres of music. Check out my originals songs and trombone performances to the right!
+                I play the trombone, guitar, and piano, and use FL Studio to make songs. I like to play and listen to all genres of music. Check out my originals songs and trombone performances to the right!
               </p>
             </section>
             <div className="image-wrapper">
@@ -201,9 +208,14 @@ function App() {
                   src="https://youtube.com/embed/10nu7D6xvmY"
                 ></iframe>
               </div>
+              <div className="music-card">
+                <iframe
+                  className="youtube-container"
+                  src="https://www.youtube.com/embed/AKupRDcoW0c"
+                ></iframe>
+              </div>
             </section>
           </section>
-          
 
           <div className="dock-row"> 
             <Dock 
@@ -214,13 +226,8 @@ function App() {
             />
           </div>
           
-
         </div>
-        
-        
-        
       </div>
-      {/* 4️⃣ Conditionally render your modal at the very end */}
       {activeProject && (
         <ProjectModal
           project={activeProject}

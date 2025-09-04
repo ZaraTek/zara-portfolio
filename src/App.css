@@ -193,12 +193,14 @@ body {
 
 .modal-links a {
   display: inline-block;
+  margin-top: 1rem;
   margin-right: 1rem;
   padding: 0.5rem 2rem;
   background: #6d5397;
   color: white;
   border-radius: 4px;
   text-decoration: none;
+  width: 250px;
 }
 
 .modal-links a:hover {
@@ -211,11 +213,12 @@ body {
 }
 
 .github-icon {
-  width: 5%;
+  width: 15%;
 }
 
 .youtube-icon {
-  width: 5%;
+  width: 15%;
+  padding: 5px;
 }
 
 .modal-body {
@@ -235,15 +238,24 @@ body {
 
 .audio-player {
   display: grid;
-  grid-template-columns: auto 1fr;
-  grid-template-rows: auto auto;
-  gap: 0.5rem 0.75rem;
+  grid-template-columns: auto minmax(0, 1fr);
+  grid-template-areas: 
+    "btn info"
+    "btn info";
+  gap: 0.5rem 0.25rem;
   align-items: center;
   background: rgba(6,0,16,0.6);
   border: 2px solid #222;
   border-radius: 12px;
-  padding: 0.75rem;
+  padding: 0.5rem;
   max-width: 560px;
+}
+
+.ap-head {
+  grid-column: 1;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
 }
 
 .ap-btn {
@@ -258,8 +270,23 @@ body {
   display: grid;
   place-items: center;
   transition: transform 0.15s ease, background-color 0.2s ease;
+  grid-area: btn;
 }
 .ap-btn:hover { transform: scale(1.05); background: #0b001f; }
+
+.ap-info {
+  grid-area: info;
+  display: flex;
+  flex-direction: column;
+  gap: .75rem;
+  min-width: 0;
+}
+
+.ap-top {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
 
 .ap-title {
   font-size: 0.9rem;
@@ -270,6 +297,7 @@ body {
 
 .ap-progress {
   position: relative;
+  width: 230px;
   height: 10px;
   border-radius: 999px;
   cursor: pointer;
@@ -299,6 +327,7 @@ body {
 }
 
 .ap-time {
+  white-space: nowrap;
   justify-self: end;
   font-size: 0.85rem;
   opacity: 0.9;
