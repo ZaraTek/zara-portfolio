@@ -1,5 +1,6 @@
 {
   "name": "zara-portfolio",
+  "homepage": "https://zaratek.github.io/zara-portfolio",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -9,8 +10,8 @@
     "@testing-library/user-event": "^13.5.0",
     "framer-motion": "^12.23.12",
     "gsap": "^3.13.0",
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "react-icons": "^5.5.0",
     "react-scripts": "5.0.1",
     "react-type-animation": "^3.2.0",
@@ -20,7 +21,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -39,5 +42,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
   }
 }
