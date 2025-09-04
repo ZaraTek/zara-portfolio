@@ -15,6 +15,9 @@ import React, { useState } from 'react';
 import ProjectModal from './ProjectModal'
 import { p } from 'framer-motion/client';
 import AudioPlayer from './AudioPlayer';
+import RollingGallery from './RollingGallery'
+import ZaraHeadshot from './assets/images/Zara_Headshot_2.jpg';
+
 
 function App() {
   const [activeProject, setActiveProject] = useState(null);
@@ -170,9 +173,9 @@ function App() {
                 I play the trombone, guitar, and piano, and like to play and listen to all genres of music. Check out my originals songs and trombone performances to the right!
               </p>
             </section>
-            <section className="profile-pic">
-              test
-            </section>  
+            <div className="image-wrapper">
+              <img className="profile-pic"src={ZaraHeadshot}></img>
+            </div>  
           </div>          
 
           <section className="column">
