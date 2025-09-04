@@ -1,0 +1,39 @@
+{
+  "files": {
+    "main.css": "/zaratekmen.com/static/css/main.8221d1da.css",
+    "main.js": "/zaratekmen.com/static/js/main.8846a47c.js",
+    "static/js/453.f5afd55b.chunk.js": "/zaratekmen.com/static/js/453.f5afd55b.chunk.js",
+    "static/media/LocalVoice_Clip.gif": "/zaratekmen.com/static/media/LocalVoice_Clip.926768c5a78adc0afca1.gif",
+    "static/media/InstaChef_Preview.gif": "/zaratekmen.com/static/media/InstaChef_Preview.26765f67428d543d20c5.gif",
+    "static/media/PokeChef.gif": "/zaratekmen.com/static/media/PokeChef.7722c4547371cb8db361.gif",
+    "static/media/ginger ale.mp3": "/zaratekmen.com/static/media/ginger ale.8d5ef072c9ec393395df.mp3",
+    "static/media/Enchanted (Zara's Version).mp3": "/zaratekmen.com/static/media/Enchanted (Zara's Version).29644dfff0b058097386.mp3",
+    "static/media/galaxy.png": "/zaratekmen.com/static/media/galaxy.918699e4bc37998e8c2c.png",
+    "static/media/a static afterlife.mp3": "/zaratekmen.com/static/media/a static afterlife.264cbf36fddcf03f453e.mp3",
+    "static/media/Zara_Headshot_2.jpg": "/zaratekmen.com/static/media/Zara_Headshot_2.496a3654fc04e8fd1231.jpg",
+    "static/media/play_button.png": "/zaratekmen.com/static/media/play_button.33c9ef0306cd8ef9177b.png",
+    "static/media/play_button_2.png": "/zaratekmen.com/static/media/play_button_2.4a8b33b02d270731176d.png",
+    "static/media/pause_button_2.png": "/zaratekmen.com/static/media/pause_button_2.4ed5f0f4131e4665d1f2.png",
+    "static/media/InstaChef.png": "/zaratekmen.com/static/media/InstaChef.a5168554e4ea38815053.png",
+    "static/media/PressStart2P-Regular.ttf": "/zaratekmen.com/static/media/PressStart2P-Regular.21503c6a5385ab41dde9.ttf",
+    "static/media/PixelifySans-VariableFont_wght.ttf": "/zaratekmen.com/static/media/PixelifySans-VariableFont_wght.010a030857ba699e8717.ttf",
+    "static/media/JacquesFrancois-Regular.ttf": "/zaratekmen.com/static/media/JacquesFrancois-Regular.cfad5109665a78ebabdf.ttf",
+    "static/media/PixelifySans-Regular.ttf": "/zaratekmen.com/static/media/PixelifySans-Regular.8703f2b844f30bf82238.ttf",
+    "static/media/PixelifySans-SemiBold.ttf": "/zaratekmen.com/static/media/PixelifySans-SemiBold.e5433e6c6c9b33efca02.ttf",
+    "static/media/PixelifySans-Medium.ttf": "/zaratekmen.com/static/media/PixelifySans-Medium.90e95b704179ee40fa4b.ttf",
+    "static/media/PixelifySans-Bold.ttf": "/zaratekmen.com/static/media/PixelifySans-Bold.569c71a9c978ac2d434f.ttf",
+    "static/media/youtube.png": "/zaratekmen.com/static/media/youtube.e5b67de4c9d149844e1b.png",
+    "static/media/waving_dog.gif": "/zaratekmen.com/static/media/waving_dog.9fcad3479f7b992b6c63.gif",
+    "static/media/OFL.txt": "/zaratekmen.com/static/media/OFL.f6b9f07f6289c8f574a2.txt",
+    "static/media/logo.svg": "/zaratekmen.com/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "static/media/README.txt": "/zaratekmen.com/static/media/README.955a016bbeab9427db94.txt",
+    "index.html": "/zaratekmen.com/index.html",
+    "main.8221d1da.css.map": "/zaratekmen.com/static/css/main.8221d1da.css.map",
+    "main.8846a47c.js.map": "/zaratekmen.com/static/js/main.8846a47c.js.map",
+    "453.f5afd55b.chunk.js.map": "/zaratekmen.com/static/js/453.f5afd55b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8221d1da.css",
+    "static/js/main.8846a47c.js"
+  ]
+}
