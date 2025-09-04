@@ -17,6 +17,10 @@ import { p } from 'framer-motion/client';
 import AudioPlayer from './AudioPlayer';
 import RollingGallery from './RollingGallery'
 import ZaraHeadshot from './assets/images/Zara_Headshot_2.jpg';
+import WavingDog from './assets/images/waving_dog.gif';
+import PokeChefGif from './assets/images/PokeChef.gif'
+import InstaChefGif from './assets/images/InstaChef_Preview.gif';
+import LocalVoiceGif from './assets/images/LocalVoice_Clip.gif'
 
 
 function App() {
@@ -56,14 +60,14 @@ function App() {
     {
       id: 'poke', 
       title: 'PokeChef', 
-      img: 'assets/images/PokeChef.gif', 
+      img: PokeChefGif,
       description: 'PokeChef is a top-down Pokemon-like game where you fight ingredients in order to collect them. The goal is to collect enough to create a dish, and then move onto the next level.', 
       github: 'https://github.com/COMP301-S125/final-game-project-pokechef/'
     },
     {
       id: 'insta',
       title: 'InstaChef',
-      img: 'assets/images/InstaChef_Preview.gif',
+      img: InstaChefGif,
       description: "InstaChef takes short-form recipes and transforms them into an instructional format. You can search for any recipe you'd like to make, or browse our feed, and view the recipes in a way that's easy to follow. Our site generates an ingredients list, as well as step-by-step instructions for the video. You can watch the video through, or jump forward or back to a particular step. The instructional step is displayed as it's being shown to you in the video, and you can pause on a step, or have it repeat itself in a loop. These features make our site an intuitive and efficient tool for anyone looking to cook with ease and confidence.",
       github: 'https://github.com/ZaraTek/InstaChef.git',
       youtube: 'https://youtu.be/QX1xf_tY8lg?si=rneJ6kAyYOrfhGru'
@@ -71,7 +75,7 @@ function App() {
     {
       id: 'local',
       title: 'LocalVoice',
-      img: 'assets/images/LocalVoice_Clip.gif',
+      img: LocalVoiceGif,
       description: 'LocalVoice allows citizens to enter their address to find local election candidates, providing basic candidate information (e.g., party affiliation, website, and photo). It offers an email template generator where voters can select key social and political issues to ask about, enabling informed voting. Additionally, voters can enter a specific issue they want to address, which will be integrated into the email template.',
       github: 'https://github.com/ZaraTek/LocalVoice.git',
       youtube: 'https://youtu.be/rJdaIqySguc?si=RExPDLjbT1XQykxV'
@@ -129,7 +133,7 @@ function App() {
       <header className="header">
         {/* you can use require to bundle static images */}
         <img
-          src={require("./assets/images/waving_dog.gif")}
+          src={WavingDog}
           alt="waving dog"
           className="dog"
         />        
@@ -161,7 +165,7 @@ function App() {
                   {proj.title}
                   {proj.img && (
                     <img
-                      src={require(`./${proj.img}`)}
+                      src={proj.img}
                       className="project-preview"
                       alt={`${proj.title} preview`}
                     />
@@ -225,7 +229,7 @@ function App() {
               magnification={90}
             />
           </div>
-          
+
         </div>
       </div>
       {activeProject && (
