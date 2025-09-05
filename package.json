@@ -1,6 +1,5 @@
 {
   "name": "zara-portfolio",
-  "homepage": "https://zaratek.github.io/zara-portfolio",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
