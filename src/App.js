@@ -19,7 +19,7 @@ import RollingGallery from './RollingGallery'
 import ZaraHeadshot from './assets/images/Zara_Headshot_2.jpg';
 import WavingDog from './assets/images/duck.gif';
 import PokeChefGif from './assets/images/PokeChef.gif'
-import InstaChefGif from './assets/images/InstaChef_Preview.gif';
+import InstaChefGif from './assets/images/InstaChef_Preview-ezgif.com-resize.gif';
 import LocalVoiceGif from './assets/images/LocalVoice_Clip.gif'
 
 
