@@ -15,7 +15,7 @@ export default function ProjectModal({ project, onClose }) {
        <div className="modal-body">
          {img && (
            <img
-             src={require(`./${img}`)}
+             src={img}
              alt={`${title} preview`}
              className="modal-preview"
            />
