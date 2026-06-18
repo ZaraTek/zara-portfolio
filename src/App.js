@@ -8,13 +8,12 @@ import {
   FaGithub,
   FaLinkedin,
   FaInstagram,
-  FaYoutube
+  FaYoutube,
+  FaSpotify
 } from 'react-icons/fa';
 import { TypeAnimation } from 'react-type-animation';
 import React, { useState } from 'react';
 import ProjectModal from './ProjectModal'
-import { p } from 'framer-motion/client';
-import AudioPlayer from './AudioPlayer';
 import RollingGallery from './RollingGallery'
 import ZaraHeadshot from './assets/images/Zara_Headshot_2.jpg';
 import WavingDog from './assets/images/waving_dog.gif';
@@ -25,7 +24,6 @@ import LocalVoiceGif from './assets/images/LocalVoice_Clip.gif'
 
 function App() {
   const [activeProject, setActiveProject] = useState(null);
-  const [activeSong, setActiveSong] = useState(null);
   const items = [
     {
       icon: <FaGithub size={24} />,
@@ -82,31 +80,6 @@ function App() {
     }
     
   ]
-
-  const songs = [
-    {
-      id: "enchanted",
-      title: "Enchanted",
-      play: 'assets/images/play_button_2.png',
-      pause: 'assets/images/pause_button_2.png',
-      audio: "assets/audio/Enchanted (Zara's Version).mp3"
-    },
-    {
-      id: "ginger_ale",
-      title: "Ginger Ale",
-      play: 'assets/images/play_button_2.png',
-      pause: 'assets/images/pause_button_2.png',
-      audio: "assets/audio/ginger ale.mp3"
-    },
-    {
-      id: "a_static_afterlife",
-      title: "A Static Afterlife",
-      play: 'assets/images/play_button_2.png',
-      pause: 'assets/images/pause_button_2.png',
-      audio: 'assets/audio/a static afterlife.mp3'
-    }
-  ]
-
 
   const Intro = () => {
     return (
@@ -179,8 +152,8 @@ function App() {
             <section className="about-me">
               <header>About Me</header>
               <p className="paragraph">
-                Hi! My name is Zara Tekmen and I'm a second-year student at UNC Chapel Hill, majoring in Computer Science and Music. <br></br><br></br>
-                I'm interested in full-stack software development, AI/ML, and cybersecurity. Check out my Hackathon submissions and other projects to the left!<br></br><br></br>
+                Hi! My name is Zara Tekmen and I'm a third-year student at UNC Chapel Hill, majoring in Computer Science and Music. <br></br><br></br>
+                My interests are in Cybersecurity, AI/ML, and full-stack development. Check out my some of my projects, HTB profile, and github..<br></br><br></br>
                 I play the trombone, guitar, and piano, and use FL Studio to make songs. I like to play and listen to all genres of music. Check out my originals songs and trombone performances to the right!
               </p>
             </section>
@@ -192,20 +165,26 @@ function App() {
           <section className="column">
             <section className="music">
               <header>Music</header>
-              {songs.map((song) => (
-                <div
-                  key={song.id}
-                  className="music-card"
-                  onClick={() => setActiveSong(song)}   // open modal
-                >
-                  <AudioPlayer
-                    src={require(`./${song.audio}`)}
-                    title={`${song.title}`}
-                    playIcon={<img src={require(`./${song.play}`)} alt="" style={{ width: 32, height: 32 }} />}
-                    pauseIcon={<img src={require(`./${song.pause}`)} alt="" style={{ width: 32, height: 32 }} />}
-                  />
+              <a
+                className="spotify-album"
+                href="https://open.spotify.com/album/3RV5wXZMvykXU5YqqUVlmB"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  className="spotify-cover"
+                  src="https://i.scdn.co/image/ab67616d00001e024db2acc86812d7e4c8025e9f"
+                  alt="The Intersection album cover"
+                />
+                <div className="spotify-info">
+                  <span className="spotify-title">The Intersection</span>
+                  <span className="spotify-artist">Zxara</span>
+                  <span className="spotify-cta">
+                    <FaSpotify size={20} />
+                    Listen on Spotify
+                  </span>
                 </div>
-              ))}
+              </a>
               <div className="music-card">
                 <iframe 
                   className="youtube-container"

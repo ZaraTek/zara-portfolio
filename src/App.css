@@ -50,7 +50,7 @@ body {
   margin: 0;
 }
 .under-header {
-  padding: 20px;
+  padding: 3rem;
 }
 .intro {
   text-align: center;
@@ -61,8 +61,8 @@ body {
 .main-content {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-  padding: 1rem;
+  gap: 2.5rem;
+  padding: 2rem;
   text-align: center;
   align-items: start;
 }
@@ -242,6 +242,62 @@ body {
   border-radius: 8px;
   border-color: #c2a6ef;
   display: flex;
+}
+
+.spotify-album {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin: 15px;
+  text-decoration: none;
+  color: inherit;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.spotify-album:hover {
+  background-color: #6d5397;
+  transform: scale(1.05);
+}
+
+.spotify-cover {
+  width: 220px;
+  max-width: 100%;
+  border-radius: 8px;
+  border: 2px solid #c2a6ef;
+}
+
+.spotify-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.spotify-title {
+  font-size: 0.9rem;
+}
+
+.spotify-artist {
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 0.95rem;
+  opacity: 0.85;
+}
+
+.spotify-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: #1db954;
+  color: #fff;
+  border-radius: 999px;
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 0.85rem;
 }
 
 .audio-player {
