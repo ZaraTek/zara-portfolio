@@ -41,12 +41,12 @@ export default function ProjectModal({ project, onClose }) {
            <div className="modal-links">
              {github && (
                <a href={github} target="_blank" rel="noopener noreferrer">
-                 GitHub <img src={githubIcon} className="github-icon"></img>
+                 GitHub <img src={githubIcon} className="github-icon" alt="GitHub"></img>
                </a>
              )}
             {youtube && (
               <a href={youtube} target="_blank" rel="noopener noreferrer">
-                YouTube Demo<img src={youTubeIcon} className="youtube-icon"></img>
+                YouTube Demo<img src={youTubeIcon} className="youtube-icon" alt="YouTube"></img>
               </a>
             )}
             {devpost && (

@@ -17,7 +17,7 @@ const IMGS = [
 
 const RollingGallery = ({ autoplay = false, pauseOnHover = false, images = [] }) => {
   images = IMGS;
-  const [isScreenSizeSm, setIsScreenSizeSm] = useState(window.innerWidth <= 640);
+  const [, setIsScreenSizeSm] = useState(window.innerWidth <= 640);
 
   const cylinderWidth = 100;
   const faceCount = images.length;

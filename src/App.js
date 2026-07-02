@@ -1,7 +1,4 @@
-import logo from './logo.svg';
 import './App.css';
-import SplitText from "./SplitText";
-import GlitchText from './GlitchText';
 import Dock from './Dock';
 import FuzzyText from './FuzzyText';
 import {
@@ -14,7 +11,6 @@ import {
 import { TypeAnimation } from 'react-type-animation';
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import ProjectModal from './ProjectModal'
-import RollingGallery from './RollingGallery'
 import ZaraHeadshot from './assets/images/github_avatar.jpg';
 import WavingDog from './assets/images/waving_dog.gif';
 import PokeChefGif from './assets/images/PokeChef.mp4'
@@ -247,9 +243,6 @@ function App() {
     );
   };
 
-  const handleAnimationComplete = () =>
-    console.log("All letters have animated!");
-
   return (
     <div className="body">
       <LightRay onHeadMove={handleHeadMove} />
@@ -316,7 +309,7 @@ function App() {
               </p>
             </section>
             <div className="image-wrapper" ref={pfpRef}>
-              <img className="profile-pic"src={ZaraHeadshot}></img>
+              <img className="profile-pic" src={ZaraHeadshot} alt="Zara Tekmen headshot"></img>
             </div>  
             <div className="dock-row"> 
               <Dock 
@@ -356,6 +349,7 @@ function App() {
                   className="youtube-container"
                   ref={el => { musicCardRefs.current[1] = el; }}
                   src="https://youtube.com/embed/10nu7D6xvmY"
+                  title="The Intersection"
                 ></iframe>
               </div>
               <div className="music-card">
