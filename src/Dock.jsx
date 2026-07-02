@@ -111,18 +111,18 @@ export default function Dock({
   magnification = 70,
   distance = 200,
   panelHeight = 68,
-  dockHeight = 256,
+  dockHeight = 150,
   baseItemSize = 50,
 }) {
   const mouseX = useMotionValue(Infinity);
-  const isHovered = useMotionValue(0);
 
-  const maxHeight = useMemo(
+  // Reserve a constant amount of headroom above the panel so the icons can
+  // magnify upward (and the label can appear) without the whole dock shifting
+  // down on hover. The height stays fixed, so hovering never moves the panel.
+  const height = useMemo(
     () => Math.max(dockHeight, magnification + magnification / 2 + 4),
     [magnification, dockHeight]
   );
-  const heightRow = useTransform(isHovered, [0, 1], [panelHeight, maxHeight]);
-  const height = useSpring(heightRow, spring);
 
   return (
     <motion.div
@@ -131,11 +131,9 @@ export default function Dock({
     >
       <motion.div
         onMouseMove={({ pageX }) => {
-          isHovered.set(1);
           mouseX.set(pageX);
         }}
         onMouseLeave={() => {
-          isHovered.set(0);
           mouseX.set(Infinity);
         }}
         className={`dock-panel ${className}`}

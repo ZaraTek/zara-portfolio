@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 const FuzzyText = ({
   children,
@@ -11,6 +11,22 @@ const FuzzyText = ({
   hoverIntensity = 0.01,
 }) => {
   const canvasRef = useRef(null);
+  // Bumped on resize so the canvas is re-measured and re-rendered at the
+  // new (vw-based) font size instead of staying frozen at its mount size.
+  const [resizeTick, setResizeTick] = useState(0);
+
+  useEffect(() => {
+    let frame;
+    const onResize = () => {
+      window.cancelAnimationFrame(frame);
+      frame = window.requestAnimationFrame(() => setResizeTick((t) => t + 1));
+    };
+    window.addEventListener("resize", onResize);
+    return () => {
+      window.cancelAnimationFrame(frame);
+      window.removeEventListener("resize", onResize);
+    };
+  }, []);
 
   useEffect(() => {
     let animationFrameId;
@@ -192,6 +208,7 @@ const FuzzyText = ({
     enableHover,
     baseIntensity,
     hoverIntensity,
+    resizeTick,
   ]);
 
   return <canvas ref={canvasRef} />;

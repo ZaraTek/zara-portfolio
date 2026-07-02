@@ -1,10 +1,18 @@
 // src/ProjectModal.jsx
-import React from 'react';
-import githubIcon from "./assets/images/github.png";
-import youTubeIcon from "./assets/images/youtube.png";
+import React, { useEffect } from 'react';
+import githubIcon from "./assets/images/github.svg";
+import youTubeIcon from "./assets/images/youtube.svg";
 
 export default function ProjectModal({ project, onClose }) {
-  const { title, img, description, github, demo, tech, youtube } = project;
+  const { title, img, description, github, demo, tech, youtube, devpost } = project;
+
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape') onClose();
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [onClose]);
 
   return (
     <div className="modal-backdrop" onClick={onClose}>
@@ -14,11 +22,18 @@ export default function ProjectModal({ project, onClose }) {
 
        <div className="modal-body">
          {img && (
-           <img
-             src={img}
-             alt={`${title} preview`}
-             className="modal-preview"
-           />
+           <div className="modal-media">
+             <video
+               src={img}
+               className="modal-preview"
+               autoPlay
+               loop
+               muted
+               playsInline
+               preload="metadata"
+               aria-label={`${title} preview`}
+             />
+           </div>
          )}
          <div className="modal-details">
            <p className="paragraph">{description}</p>
@@ -29,12 +44,17 @@ export default function ProjectModal({ project, onClose }) {
                  GitHub <img src={githubIcon} className="github-icon"></img>
                </a>
              )}
-             {youtube && (
-               <a href={youtube} target="_blank" rel="noopener noreferrer">
-                 YouTube Demo<img src={youTubeIcon} className="youtube-icon"></img>
-               </a>
-             )}
-             {demo && (
+            {youtube && (
+              <a href={youtube} target="_blank" rel="noopener noreferrer">
+                YouTube Demo<img src={youTubeIcon} className="youtube-icon"></img>
+              </a>
+            )}
+            {devpost && (
+              <a href={devpost} target="_blank" rel="noopener noreferrer">
+                Devpost
+              </a>
+            )}
+            {demo && (
                <a href={demo} target="_blank" rel="noopener noreferrer">
                  Live demo
                </a>
