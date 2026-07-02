@@ -255,7 +255,7 @@ function App() {
         />        
         
         <div className='name'>
-          <FuzzyText fontSize="clamp(0.55rem, 6.5vw, 5rem)">
+          <FuzzyText fontSize="clamp(2rem, 10vw, 5rem)">
             Zara Tekmen
           </FuzzyText>
         </div>

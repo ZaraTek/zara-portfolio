@@ -93,7 +93,7 @@ const FuzzyText = ({
       offCtx.fillStyle = color;
       offCtx.fillText(text, xOffset - actualLeft, actualAscent);
 
-      const horizontalMargin = 50;
+      const horizontalMargin = 12;
       const verticalMargin = 0;
       canvas.width = offscreenWidth + horizontalMargin * 2;
       canvas.height = tightHeight + verticalMargin * 2;
