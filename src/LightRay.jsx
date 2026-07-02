@@ -29,7 +29,7 @@ const LightRay = ({ onHeadMove }) => {
       return Math.max(0, rect.bottom);
     };
 
-    const speed = 6;
+    const speed = 3.5;
     let x = width * 0.3;
     let y = Math.max(getTopBound() + 40, height * 0.35);
     let angle = Math.PI / 5;
